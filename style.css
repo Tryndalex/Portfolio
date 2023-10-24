@@ -1,0 +1,326 @@
+
+html {
+    color: #F4F6FC;
+}
+body{
+    background: #050A30;
+    font-family: 'Merriweather', serif;
+}
+html, body{
+    font-weight: 800;
+}
+h1 {
+    font-size: 4rem;  
+}
+h2 {
+    font-size: 22px;
+    margin: 0;
+    text-align: left;
+}
+p {
+    font-family: 'Libre Baskerville', serif;
+    margin: 30px auto;
+    max-width: 70vw;
+    text-align: center;
+    color: hsl(206, 93%, 67%);
+}
+
+li {
+    font-size: 1.2rem;
+    margin: 10px 30px;
+    text-align: center;
+    list-style: none;
+
+    
+}
+
+
+/* link & hover */
+a {
+    background-image: linear-gradient(
+      to right,
+      #F4F6FC,
+      #5db5f9 50%,
+      #5db5f9 50%
+    );
+    background-size: 200% 10%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-size: 2em;
+  }
+  a:before {
+    content: '';
+    background: #5db5f9;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+  }
+  a:hover {
+    background-position: 0;
+    font-size: 3rem;
+   }
+   a:hover::before {
+    width: 100%;
+  }
+/* link & hover end */
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}
+.title-bot{
+    text-align: center;
+    
+}
+.title-bot h1 {
+    text-shadow: 5px 1px rgb(93, 181, 249);
+    letter-spacing: 12px;
+}
+.title-up {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 30vh auto;
+}
+.me {
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: rgb(93, 181, 249) solid 4px;
+}
+.contact {
+    margin-top: 70px;
+    color: hsl(206, 93%, 67%);
+    text-decoration: underline;
+    font-size: large;
+}
+.imalex {
+    display: flex;
+}
+.trynd {
+    max-height: 130px;
+}
+.trynd h2 {
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+/* Start Animated Trynd@lex */
+svg {
+    font: 80px 'Monerrat';
+}
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 22% 18%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+.text-copy:nth-child(1){
+  stroke: aqua;
+  animation-delay: -1;
+}
+.text-copy:nth-child(2){
+  stroke: hsl(206, 93%, 67%);
+  animation-delay: -2s;
+}
+.text-copy:nth-child(3){
+  stroke: #233DFF;
+  animation-delay: -3s;
+}
+.text-copy:nth-child(4){
+  stroke: hsl(233, 100%, 57%);
+  animation-delay: -4s;
+}
+.text-copy:nth-child(5){
+  stroke: hsl(206, 100%, 90%);
+  animation-delay: -5s;
+}
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+/* End Animated Trynd@lex */
+
+/* gradient border */
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+.gradient-border {
+  --border-width: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  font-family: Lato, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  background: #233DFF;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(233, 100%, 57%),
+      hsl(206, 100%, 60%),
+      hsl(206, 93%, 67%),
+      hsl(233, 100%, 57%),
+      rgb(95, 242, 240)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+/* gradient border */
+
+/* gradient back-ground */
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #003298;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  -webkit-animation: cube 12s ease-in forwards infinite;
+          animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #233DFF;
+}
+.cube:nth-child(2) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+@-webkit-keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+/* gradient back-ground */
+.skills {
+    text-align: center;
+    margin: 10vh auto;
+    max-width: 90%;
+}
+.skills1 {
+    margin-top: 100px;
+    border-radius: 10px;
+    
+}
+.skills1 h2 {
+    margin-bottom: 50px;
+    margin-left: -25px; 
+}
+.skills h1 {
+    text-shadow: 5px 1px rgb(93, 181, 249);
+    letter-spacing: 12px;
+}
+
+.gradient-border1 {
+    --border-width: 3px;
+  position: relative;
+  font-family: Lato, sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #F4F6FC;
+  width: fit-content;
+  padding: 0px 10px;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(233, 100%, 57%),
+      hsl(206, 100%, 60%),
+      hsl(206, 93%, 67%),
+      hsl(233, 100%, 57%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+    
+}
+.ab {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+
+}
